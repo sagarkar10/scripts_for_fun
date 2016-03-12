@@ -19,6 +19,7 @@ Steps: [make sure u use sudo or appropriate permission where required]
 	the destination of the saved file change the 'file_path' variable in 'camclick'
 	file in the new location.
 
+5>	In the newer version of Ubuntu use avconv instead of ffmpeg (sudo apt-get install libav-tools), in the 'camclick' file
 
 
 Good Luck

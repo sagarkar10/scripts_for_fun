@@ -1,0 +1,26 @@
+#author@sagarkar10
+This will help you set up the script to take a snapshot whenever someone provide a wrong password.
+
+Steps: [make sure u use sudo or appropriate permission where required]
+
+
+1>	coppy the 'camclick' file from here to the location '/usr/local/bin/' 
+	(or any other location, but if u coppy to other location be sure to make the 
+	change in 'common-auth' file in this folder, in the line 
+	auth	[default=ignore]	pam_exec.so seteuid /usr/local/bin/camclick ) 
+
+2> 	make the 'camclick' file in the new location ('/usr/local/bin/' or other) executable.
+	[run this in terminal (for the same path or give new path): chmod +x /usr/local/bin/camclick ]
+
+3> 	<AT YOUR OWN RISK> copy the 'common-auth' from this folder to replace it in '/etc/pam.d'
+	(after the required change if you have cahnged the location in 1st step)
+
+4> 	You are done, this will save the snaps in '/tem' folder, if you want to change
+	the destination of the saved file change the 'file_path' variable in 'camclick'
+	file in the new location.
+
+
+
+Good Luck
+Cheers
+

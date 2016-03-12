@@ -1,6 +1,7 @@
 #!/bin/bash
 #author@sagarkar10
 #This script clicks your webcam when ever called for along with the twicks in pam.d drive
+# In the newer version of Ubuntu use avconv instead of ffmpeg (sudo apt-get install libav-tools), everything else is same
 
 file_path=`/var/tmp` 
 #change if you dont want them in ut 'var/tmp' folder, give the desired path

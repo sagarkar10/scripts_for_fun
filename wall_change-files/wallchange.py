@@ -51,7 +51,7 @@ else:
 p_get_website = subprocess.call([cmd_get_website],shell=True)
 print("getiing html from website:","Error" if p_get_website else "Done")
 
-f = open('/tmp/output.html','r')
+f = open('/tmp/output.html','r', encoding="ascii",errors="surrogateescape")
 word = f.read()
 
 img_url=re.findall('<a href="(image[^"]*)',word)

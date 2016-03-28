@@ -42,7 +42,7 @@ if p_find != b'':
 	else:
 		print("Old File exist, Process Started...")
 		
-		p_rm_old = subprocess.run([cmd_rm_old],shell=True)
+		p_rm_old = subprocess.call([cmd_rm_old],shell=True)
 		print("Deleting Old imgae...")
 else:
 	print("No previos File found, Process Started...")
@@ -62,7 +62,7 @@ cmd_get_img= "curl "+img_url+" > "+file_path
 p_get_img = subprocess.call([cmd_get_img],shell=True)
 print("downloading image from :"+img_url,"Error" if p_get_img else "Done")
 
-
+p_get_img.wait()
 p_change_wall = subprocess.call([cmd_change_wall],shell=True)
 print("Setting up wall paper:","Error" if p_change_wall else "Done")
 

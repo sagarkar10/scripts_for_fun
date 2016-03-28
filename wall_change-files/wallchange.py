@@ -59,7 +59,7 @@ img_url = 'http://apod.nasa.gov/apod/'+img_url[0]
 print(img_url)
 
 cmd_get_img= "curl "+img_url+" > "+file_path
-p_get_img = subprocess.call([cmd_get_img],shell=True)
+p_get_img = subprocess.Popen([cmd_get_img],shell=True)
 print("downloading image from :"+img_url,"Error" if p_get_img else "Done")
 
 p_get_img.wait()

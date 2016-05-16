@@ -18,7 +18,7 @@ cmd_find = "find "+file_path+" ; exit 0 ;" # bash command to find file
 
 cmd_change_wall = "gsettings set org.gnome.desktop.background picture-uri 'file:///"+file_path+"'" # command to change wallpaper
 
-cmd_find_old = "find "+file_path+" -mtime +1 ; exit 0 ;" #find file older than a day
+cmd_find_old = "find "+file_path+" -mmin +1400 ; exit 0 ;" #find file older 24*60 min = 1 day
 
 cmd_rm_old = "rm "+file_path #remove old file
 
